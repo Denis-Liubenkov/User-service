@@ -29,13 +29,11 @@ dependencies {
     implementation("org.postgresql:postgresql:42.7.4")
     implementation("org.springframework.boot:spring-boot-starter-validation:3.4.0")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.2.0")
-    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.2.0")
-
-
     implementation("org.springframework.cloud:spring-cloud-starter-consul-discovery:4.2.0")
     implementation("org.springframework.cloud:spring-cloud-starter-config:4.2.0")
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j:3.2.0")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb:3.4.0")
+    implementation("org.springframework.boot:spring-boot-starter-security")
 }
 
 tasks.withType<Test> {
