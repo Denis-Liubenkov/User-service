@@ -1,8 +1,7 @@
 plugins {
     java
-    war
-    id("org.springframework.boot") version "3.4.0"
-    id("io.spring.dependency-management") version "1.1.6"
+    id("org.springframework.boot") version "3.4.3"
+    id("io.spring.dependency-management") version "1.1.7"
 }
 
 group = "com.example"
@@ -34,8 +33,11 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j:3.2.0")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb:3.4.0")
     implementation("org.springframework.boot:spring-boot-starter-security")
-}
+    dependencies {
+        testImplementation("com.h2database:h2")
+    }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
